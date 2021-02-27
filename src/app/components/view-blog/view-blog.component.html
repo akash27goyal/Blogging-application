@@ -1,0 +1,26 @@
+    <div class="row" *ngIf="blogs.length > 0; else elseBlogBlock">
+        <div class="sort">
+            <label for="blogs">Sort by date: </label>
+            <select name="blogs" (change)="getFilteredBlogs()" [(ngModel)]="selectedValue" id="blogs">
+                <option [value]="item.id" *ngFor="let item of sortOptions">{{item.name}}</option>
+            </select>
+        </div>
+        <div *ngFor="let blog of blogs;let i=index" class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{blog.title}} <small class="text-muted"> by </small>{{blog.lastModifiedBy}}</h5>
+                    <p class="card-text">{{blog.description}}</p>
+                    <p class="card-text"><small class="text-muted">Last Updated at: {{blog.lastModifiedAt | date:'yyyy-MM-dd hh:mm'}}</small></p>
+                    <a [routerLink]="['blog/edit',blog.id]" class="btn btn-primary">Edit</a>
+                    <button class="btn btn-primary" (click)="onDelete(blog.id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<ng-template #elseBlogBlock>
+    <div class="row noBlogBlock">
+        <div class="col-md-12" id="noBlog">
+            <h5 class="textPosition">Currently there are no blogs. Click on <a routerLink="blog/add/0">Add Blog</a> to add blog.</h5>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,10 @@
+.heading{
+    margin-top:50px;
+}
+.mandatory{
+    color:red;
+}
+
+.form-control.textBox{
+    height:200px;
+}

@@ -1,0 +1,19 @@
+   
+
+<h2 class="heading"> {{header}}</h2>
+
+   <form>
+       <div class="form-group">
+           <label for="Title">Title<span class="mandatory">*</span></label>
+           <input type="text" class="form-control" [(ngModel)]="blog.title" name="title" placeholder="Enter Title">
+       </div>
+       <div class="form-group">
+           <label for="Description">Description<span class="mandatory">*</span></label>
+           <textarea class="form-control textBox" [(ngModel)]="blog.description" name="description" placeholder="Enter Description">{{blog.description}}</textarea>
+       </div>
+
+       <div class="form-group">
+           <button type="submit" class="btn btn-primary" (click)="onSubmit()">Save</button>
+       </div>
+   </form>
+    

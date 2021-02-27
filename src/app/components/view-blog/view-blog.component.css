@@ -1,0 +1,29 @@
+#noBlog {
+    background-color: #d4ebf2;
+    text-align: center;
+}
+
+.noBlogBlock {
+    margin-top: 100px;
+    height: 400px;
+}
+
+.textPosition {
+    margin-top: 180px;
+}
+
+button{
+    margin-left:5px;
+}
+
+.card{
+    margin-top:50px;
+}
+
+.dropdown{
+    height:300px;
+}
+
+.sort{
+    margin-top:40px;
+}

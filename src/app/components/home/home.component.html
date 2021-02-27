@@ -1,0 +1,12 @@
+<div class="header">
+    <a routerLink="/home" class="logo">Blogging Application</a>
+    <div class="header-right">
+        <a routerLink="/home">Home</a>
+        <a routerLink="blog/add/0">Add Blog</a>
+        <a routerLink="" (click)="logout()">Log Out</a>
+    </div>
+</div>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
